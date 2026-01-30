@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Oktania Cahya Ramadhani</title>
+    <style>
+        /* CSS Terintegrasi */
+        :root {
+            --main-blue: #0056b3;
+            --light-blue: #e3f2fd;
+            --dark-blue: #003366;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--main-blue);
+            color: var(--white);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv-card {
+            background-color: var(--dark-blue);
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .section-title {
+            color: #00c6ff;
+            border-bottom: 2px solid #00c6ff;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-box p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .tag {
+            background: #007bff;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 5px 2px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .social-link {
+            color: #00c6ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-card">
+    <div class="header">
+        <h1>Oktania Cahya Ramadhani</h1>
+        <p>Lahir: 17 Oktober 2006</p>
+    </div>
+
+    <div class="container">
+        <div class="section-title">Tentang Diri</div>
+        <p>Saya Sangat Suka Memasak, Menonton Film, Juga Mendengarkan Musik. Saya adalah pribadi yang disiplin dan senang mengeksplorasi hal-hal baru di bidang kuliner maupun seni.</p>
+
+        <div class="grid">
+            <div class="info-box">
+                <div class="section-title">Kontak & Alamat</div>
+                <p><strong>📞 Telepon:</strong> +62 888 608 7566</p>
+                <p><strong>🏠 Alamat:</strong> Kp. Bojong Asih Rt 02/Rw 04</p>
+                <p><strong>🎬 Hobby:</strong> Menonton Film</p>
+            </div>
+
+            <div class="info-box">
+                <div class="section-title">Media Sosial</div>
+                <p><strong>Instagram:</strong> <a class="social-link" href="#">@oktaniacahyar_17</a></p>
+                <p><strong>TikTok:</strong> <a class="social-link" href="#">@ttaa</a></p>
+                <p><strong>Facebook:</strong> -</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <div class="section-title">Pendidikan</div>
+                <ul>
+                    <li><strong>SMA KP Baleendah</strong><br>Lulus Tahun 2026</li>
+                    <li><strong>SMPN 1 Dayeuhkolot</strong><br>Lulus Tahun 2022</li>
+                    <li><strong>SD Zipur Dayeuhkolot 02</strong><br>Lulus Tahun 2019</li>
+                </ul>
+            </div>
+            <div>
+                <div class="section-title">Organisasi</div>
+                <ul>
+                    <li><strong>SMA:</strong> Badminton</li>
+                    <li><strong>SMPN:</strong> Paskibra</li>
+                    <li><strong>SD:</strong> -</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Keahlian & Sertifikat</div>
+        <p>
+            <span class="tag">Memasak</span>
+            <span class="tag">Paskibra</span>
+            <span class="tag">Badminton</span>
+        </p>
+        <ul>
+            <li><strong>Sertifikat:</strong> Juara Lomba Paskibra Kategori Madya 1</li>
+        </ul>
+
+        <div class="section-title">Bahasa</div>
+        <p>Indonesia (Aktif), B.Inggris (Pasif)</p>
+    </div>
+
+    <footer>
+        &copy; 2026 Oktania Cahya Ramadhani. Dibuat untuk Website GitHub.
+    </footer>
+</div>
+
+</body>
+</html>
