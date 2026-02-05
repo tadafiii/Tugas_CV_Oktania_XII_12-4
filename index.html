@@ -1,182 +1,328 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Oktania Cahya Ramadhani</title>
+    <title>CV Oktania Cahya Ramadhani</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* CSS Terintegrasi */
         :root {
-            --main-blue: #0056b3;
-            --light-blue: #e3f2fd;
-            --dark-blue: #003366;
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --light-blue: #eff6ff;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
             --white: #ffffff;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: var(--main-blue);
-            color: var(--white);
-            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: var(--text-dark);
+            line-height: 1.6;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .cv-card {
-            background-color: var(--dark-blue);
-            width: 100%;
-            max-width: 800px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .header {
-            background: linear-gradient(135deg, #007bff, #00c6ff);
-            padding: 40px 30px;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
         .container {
-            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flehttpsx;
+            flex-wrap: wrap;
         }
 
-        .section-title {
-            color: #00c6ff;
-            border-bottom: 2px solid #00c6ff;
-            padding-bottom: 5px;
-            margin-top: 25px;
+        /* Sidebar / Left Column */
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 40px 30px;
+        }
+
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            object-fit: cover;
+            background-color: var(--light-blue);
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
             font-size: 1.2rem;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
         }
 
-        .info-box p {
-            margin: 8px 0;
-            line-height: 1.6;
-        }
-
-        .tag {
-            background: #007bff;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin: 5px 2px;
-        }
-
-        ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 10px;
+        .contact-item i {
+            margin-right: 12px;
+            width: 20px;
         }
 
         .social-link {
-            color: #00c6ff;
+            color: var(--white);
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.3s;
         }
 
         .social-link:hover {
-            text-decoration: underline;
+            opacity: 0.8;
         }
 
-        footer {
-            text-align: center;
+        /* Main Content / Right Column */
+        .main-content {
+            flex: 2;
+            min-width: 350px;
+            padding: 40px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin: 30px 0 15px 0;
+            font-weight: 700;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+        }
+
+        .about-text {
+            color: var(--text-dark);
+            background: var(--light-blue);
             padding: 20px;
-            font-size: 0.8rem;
-            background: rgba(0,0,0,0.2);
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 4px;
         }
 
-        /* Responsive Mobile */
-        @media (max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 1.6rem; }
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--light-blue);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--secondary-blue);
+            font-size: 0.9rem;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: var(--secondary-blue);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            background: #f9fafb;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="cv-card">
-    <div class="header">
-        <h1>Oktania Cahya Ramadhani</h1>
-        <p>Lahir: 17 Oktober 2006</p>
-    </div>
-
     <div class="container">
-        <div class="section-title">Tentang Diri</div>
-        <p>Saya Sangat Suka Memasak, Menonton Film, Juga Mendengarkan Musik. Saya adalah pribadi yang disiplin dan senang mengeksplorasi hal-hal baru di bidang kuliner maupun seni.</p>
-
-        <div class="grid">
-            <div class="info-box">
-                <div class="section-title">Kontak & Alamat</div>
-                <p><strong>📞 Telepon:</strong> +62 888 608 7566</p>
-                <p><strong>🏠 Alamat:</strong> Kp. Bojong Asih Rt 02/Rw 04</p>
-                <p><strong>🎬 Hobby:</strong> Menonton Film</p>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-img-container">
+                <!-- Placeholder image - Replace 'src' with your actual photo URL -->
+                <img src="WhatsApp Image 2026-02-05 at 00.17.16.jpeg" alt="Oktania Cahya Ramadhani" class="profile-img">
             </div>
 
-            <div class="info-box">
-                <div class="section-title">Media Sosial</div>
-                <p><strong>Instagram:</strong> <a class="social-link" href="#">@oktaniacahyar_17</a></p>
-                <p><strong>TikTok:</strong> <a class="social-link" href="#">@ttaa</a></p>
-                <p><strong>Facebook:</strong> -</p>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Kontak</h3>
+                <div class="contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>+62 888 608 7566</span>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>Kp. Bojong Asih Rt 02/Rw 04</span>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="calendar"></i>
+                    <span>17 Oktober 2006</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Media Sosial</h3>
+                <div class="contact-item">
+                    <i data-lucide="instagram"></i>
+                    <a href="https://instagram.com/oktaniacahyar_17" class="social-link" target="_blank">oktaniacahyar_17</a>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="music-2"></i>
+                    <a href="#" class="social-link">Tiktok: ttaa</a>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="facebook"></i>
+                    <span>-</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Bahasa</h3>
+                <div class="language-item" style="background: rgba(255,255,255,0.1);">
+                    <span>Indonesia</span>
+                    <span>Fasih</span>
+                </div>
+                <div class="language-item" style="background: rgba(255,255,255,0.1);">
+                    <span>B. Inggris</span>
+                    <span>Menengah</span>
+                </div>
             </div>
         </div>
 
-        <div class="grid">
-            <div>
-                <div class="section-title">Pendidikan</div>
-                <ul>
-                    <li><strong>SMA KP Baleendah</strong><br>Lulus Tahun 2026</li>
-                    <li><strong>SMPN 1 Dayeuhkolot</strong><br>Lulus Tahun 2022</li>
-                    <li><strong>SD Zipur Dayeuhkolot 02</strong><br>Lulus Tahun 2019</li>
-                </ul>
-            </div>
-            <div>
-                <div class="section-title">Organisasi</div>
-                <ul>
-                    <li><strong>SMA:</strong> Badminton</li>
-                    <li><strong>SMPN:</strong> Paskibra</li>
-                    <li><strong>SD:</strong> -</li>
-                </ul>
-            </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Oktania Cahya Ramadhani</h1>
+                <p class="tagline">Pelajar | Penggemar Kuliner & Seni</p>
+            </header>
+
+            <section>
+                <h3 class="section-title"><i data-lucide="user"></i> Tentang Diri</h3>
+                <p class="about-text">
+                    Saya adalah pribadi yang memiliki antusiasme tinggi dalam dunia kreatif dan hobi yang beragam. 
+                    <strong>Sangat suka memasak</strong>, mengeksplorasi rasa baru, serta menikmati waktu luang dengan 
+                    <strong>menonton film</strong> dan <strong>mendengarkan musik</strong> untuk mencari inspirasi.
+                </p>
+            </section>
+
+            <section>
+                <h3 class="section-title"><i data-lucide="graduation-cap"></i> Pendidikan</h3>
+                <div class="timeline-item">
+                    <div class="timeline-year">Lulus 2026</div>
+                    <div class="timeline-title">SMA KP Baleendah</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Lulus 2022</div>
+                    <div class="timeline-title">SMPN 1 Dayeuhkolot</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Lulus 2019</div>
+                    <div class="timeline-title">SD Zipur Dayeuhkolot 02</div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="section-title"><i data-lucide="users"></i> Pengalaman Organisasi</h3>
+                <div class="timeline-item">
+                    <div class="timeline-title">Badminton</div>
+                    <p style="color: var(--text-light)">SMA KP Baleendah</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Paskibra</div>
+                    <p style="color: var(--text-light)">SMPN 1 Dayeuhkolot</p>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="section-title"><i data-lucide="award"></i> Sertifikat & Keahlian</h3>
+                <div style="margin-bottom: 20px;">
+                    <div class="timeline-title">Lomba Paskibra</div>
+                    <p>Pemenang Kategori Madya 1</p>
+                </div>
+                
+                <div>
+                    <span class="skill-badge">Memasak</span>
+                    <span class="skill-badge">Menonton Film</span>
+                    <span class="skill-badge">Teamwork</span>
+                    <span class="skill-badge">Kedisiplinan</span>
+                </div>
+            </section>
         </div>
-
-        <div class="section-title">Keahlian & Sertifikat</div>
-        <p>
-            <span class="tag">Memasak</span>
-            <span class="tag">Paskibra</span>
-            <span class="tag">Badminton</span>
-        </p>
-        <ul>
-            <li><strong>Sertifikat:</strong> Juara Lomba Paskibra Kategori Madya 1</li>
-        </ul>
-
-        <div class="section-title">Bahasa</div>
-        <p>Indonesia (Aktif), B.Inggris (Pasif)</p>
     </div>
 
-    <footer>
-        &copy; 2026 Oktania Cahya Ramadhani. Dibuat untuk Website GitHub.
-    </footer>
-</div>
-
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 </body>
 </html>
